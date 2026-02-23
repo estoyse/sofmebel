@@ -54,47 +54,50 @@ export function Navbar() {
       initial={{ y: 0 }}
       animate={{ y: isVisible ? 0 : -110 }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
-      className='fixed inset-x-0 top-0 z-30 backdrop-blur-md bg-greenDeep/60'
+      className='fixed inset-x-0 top-0 z-50 backdrop-blur-xl bg-greenDeep/80 border-b border-white/5'
     >
-      <div className='mx-auto flex w-full max-w-7xl items-center justify-between px-5 py-5 sm:px-8 lg:px-10 '>
-        <div className='px-5 py-3 text-4xl font-semibold tracking-wide text-beigeLight font-brand'>
+      <div className='mx-auto flex w-full max-w-[1400px] items-center justify-between px-6 py-4 lg:px-12'>
+        <div className='text-2xl lg:text-3xl font-semibold tracking-tight text-white font-brand'>
           <span className='font-brand text-goldAccent'>Sof</span> Mebel
         </div>
 
-        <nav className='hidden items-center gap-7 rounded-2xl px-6 py-3 text-sm text-beigeLight md:flex'>
+        <nav className='hidden items-center gap-10 text-[15px] font-medium tracking-wide text-white/90 md:flex'>
           {navItems.map(item => (
             <a
               key={item.label}
               href={item.href}
-              className='transition duration-300 hover:text-goldAccent'
+              className='relative transition-colors duration-300 hover:text-goldAccent group'
             >
               {item.label}
+              <span className='absolute -bottom-1 left-0 w-0 h-[1px] bg-goldAccent transition-all duration-300 group-hover:w-full' />
             </a>
           ))}
         </nav>
 
-        <button
-          type='button'
-          onClick={() => setIsMobileMenuOpen(prev => !prev)}
-          className='glass-card inline-flex h-11 w-11 items-center justify-center rounded-2xl text-beigeLight md:hidden'
-          aria-label='Menyu'
-          aria-expanded={isMobileMenuOpen}
-          aria-controls='mobile-menu'
-        >
-          <svg
-            viewBox='0 0 24 24'
-            className='h-5 w-5'
-            fill='none'
-            stroke='currentColor'
-            strokeWidth='2'
+        <div className='flex items-center gap-4'>
+          <button
+            type='button'
+            onClick={() => setIsMobileMenuOpen(prev => !prev)}
+            className='flex h-11 w-11 items-center justify-center rounded-full bg-white/5 border border-white/10 text-white md:hidden transition-colors hover:bg-white/10'
+            aria-label='Menyu'
+            aria-expanded={isMobileMenuOpen}
           >
-            {isMobileMenuOpen ? (
-              <path d='M6 6l12 12M18 6l-12 12' />
-            ) : (
-              <path d='M4 7h16M4 12h16M4 17h16' />
-            )}
-          </svg>
-        </button>
+            <svg
+              viewBox='0 0 24 24'
+              className='h-6 w-6'
+              fill='none'
+              stroke='currentColor'
+              strokeWidth='2'
+              strokeLinecap='round'
+            >
+              {isMobileMenuOpen ? (
+                <path d='M6 6l12 12M18 6l-12 12' />
+              ) : (
+                <path d='M4 8h16M4 16h16' />
+              )}
+            </svg>
+          </button>
+        </div>
       </div>
 
       <AnimatePresence>
@@ -103,19 +106,19 @@ export function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className='mx-auto w-full max-w-7xl px-5 overflow-hidden md:hidden sm:px-8 lg:px-10'
+            transition={{ duration: 0.3, ease: "circOut" }}
+            className='w-full px-6 overflow-hidden md:hidden'
           >
             <nav
               id='mobile-menu'
-              className='soft-ring rounded-2xl p-3 text-beigeLight mb-6'
+              className='flex flex-col gap-2 py-6 border-t border-white/5'
             >
               {navItems.map(item => (
                 <a
                   key={item.label}
                   href={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className='block rounded-xl px-3 py-2 text-sm transition duration-300 hover:bg-beigeLight/10 hover:text-goldAccent'
+                  className='block py-3 text-lg font-medium text-white/90 transition-colors hover:text-goldAccent active:text-goldAccent'
                 >
                   {item.label}
                 </a>
