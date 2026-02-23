@@ -11,6 +11,7 @@ import {
   Send,
 } from "lucide-react";
 import { useState } from "react";
+import Link from "next/link";
 
 export function Footer() {
   const [email, setEmail] = useState("");
@@ -82,9 +83,11 @@ export function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h4 className='text-2xl mb-6 text-goldAccent font-normal'>
-              Premium Mebel
-            </h4>
+            <Link href='/'>
+              <div className='text-2xl lg:text-3xl font-semibold tracking-tight text-white font-brand'>
+                <span className='font-brand text-goldAccent'>Sof</span> Mebel
+              </div>
+            </Link>
             <p className='text-sm leading-relaxed mb-6 text-white/60'>
               1998-yildan beri abadiy nafislikni yaratamiz. Biz makonlarni
               o‘zgartiradigan va turmush tarzini yuksaltiradigan, avlodlarga

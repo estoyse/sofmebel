@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import Link from "next/link";
 
 const navItems = [
   { label: "Bosh sahifa", href: "/#bosh-sahifa" },
@@ -57,9 +58,11 @@ export function Navbar() {
       className='fixed inset-x-0 top-0 z-50 backdrop-blur-xl bg-greenDeep/80 border-b border-white/5'
     >
       <div className='mx-auto flex w-full max-w-[1400px] items-center justify-between px-6 py-4 lg:px-12'>
-        <div className='text-2xl lg:text-3xl font-semibold tracking-tight text-white font-brand'>
-          <span className='font-brand text-goldAccent'>Sof</span> Mebel
-        </div>
+        <Link href='/'>
+          <div className='text-2xl lg:text-3xl font-semibold tracking-tight text-white font-brand'>
+            <span className='font-brand text-goldAccent'>Sof</span> Mebel
+          </div>
+        </Link>
 
         <nav className='hidden items-center gap-10 text-[15px] font-medium tracking-wide text-white/90 md:flex'>
           {navItems.map(item => (
@@ -74,7 +77,7 @@ export function Navbar() {
           ))}
         </nav>
 
-        <div className='flex items-center gap-4'>
+        <div className='flex items-center gap-4 md:hidden'>
           <button
             type='button'
             onClick={() => setIsMobileMenuOpen(prev => !prev)}
