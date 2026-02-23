@@ -126,13 +126,14 @@ export function Hero() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className='relative h-[400px] sm:h-[500px] lg:h-[700px] mt-12 lg:mt-0'
+            className='relative h-[500px] sm:h-[600px] lg:h-[700px] mt-12 lg:mt-0'
           >
+            {/* Primary Image */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.4, duration: 0.8 }}
-              className='absolute inset-0 lg:inset-auto lg:top-0 lg:right-0 lg:w-[70%] lg:h-[65%] rounded-2xl lg:rounded-3xl overflow-hidden shadow-2xl border border-goldAccent/20'
+              className='absolute top-0 right-0 w-[85%] lg:w-[70%] h-[60%] lg:h-[65%] rounded-2xl lg:rounded-3xl overflow-hidden shadow-2xl border border-goldAccent/20'
             >
               <ImageWithFallback
                 src='https://images.unsplash.com/photo-1762803841422-5b8cf8767cd9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBtb2Rlcm4lMjBmdXJuaXR1cmUlMjBzb2ZhfGVufDF8fHx8MTc3MTg0OTMxOXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
@@ -142,11 +143,12 @@ export function Hero() {
               <div className='absolute inset-0 bg-gradient-to-t from-black/30 to-transparent' />
             </motion.div>
 
+            {/* Secondary Image */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.6, duration: 0.8 }}
-              className='hidden lg:block absolute bottom-0 left-0 w-[55%] h-[50%] rounded-3xl overflow-hidden shadow-2xl border border-goldAccent/20'
+              className='absolute bottom-0 left-0 w-[60%] lg:w-[55%] h-[45%] lg:h-[50%] rounded-2xl lg:rounded-3xl overflow-hidden shadow-2xl border border-goldAccent/20 z-10'
             >
               <ImageWithFallback
                 src='https://images.unsplash.com/photo-1760611656233-915efdf138b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwbHV4dXJ5JTIwY2hhaXIlMjBpbnRlcmlvcnxlbnwxfHx8fDE3NzE4NDkzMTl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
@@ -156,19 +158,25 @@ export function Hero() {
               <div className='absolute inset-0 bg-gradient-to-t from-black/30 to-transparent' />
             </motion.div>
 
+            {/* Zenith Collection Card */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.8 }}
-              className='hidden lg:block absolute top-1/2 left-1/4 -translate-y-1/2 px-6 py-4 rounded-2xl backdrop-blur-xl shadow-2xl bg-greenDeep/80 border border-goldAccent/30'
+              className='absolute top-1/2 left-[10%] lg:left-1/4 -translate-y-1/2 px-4 py-3 lg:px-6 lg:py-4 rounded-xl lg:rounded-2xl backdrop-blur-xl shadow-2xl bg-greenDeep/80 border border-goldAccent/30 z-20'
             >
-              <div className='text-sm mb-1 text-white/60'>Yangilik</div>
-              <div className='text-xl mb-1 text-goldAccent font-medium'>
+              <div className='text-[10px] lg:text-sm mb-0.5 lg:mb-1 text-white/60'>
+                Yangilik
+              </div>
+              <div className='text-base lg:text-xl mb-0.5 lg:mb-1 text-goldAccent font-medium'>
                 Zenith Kolleksiyasi
               </div>
-              <div className='text-sm text-white/80'>$2,499 dan boshlab</div>
+              <div className='text-[10px] lg:text-sm text-white/80'>
+                $2,499 dan boshlab
+              </div>
             </motion.div>
 
+            {/* Decorative Elements */}
             <motion.div
               animate={{
                 rotate: 360,
@@ -178,7 +186,7 @@ export function Hero() {
                 repeat: Infinity,
                 ease: "linear",
               }}
-              className='hidden lg:block absolute -top-4 -right-4 w-24 h-24 rounded-full opacity-20 border-2 border-goldAccent'
+              className='absolute -top-4 -right-2 lg:-right-4 w-16 lg:w-24 h-16 lg:h-24 rounded-full opacity-20 border-2 border-goldAccent'
             />
             <motion.div
               animate={{
@@ -189,7 +197,7 @@ export function Hero() {
                 repeat: Infinity,
                 ease: "linear",
               }}
-              className='hidden lg:block absolute -bottom-8 -left-8 w-32 h-32 rounded-full opacity-10 border-2 border-goldAccent'
+              className='absolute -bottom-4 lg:-bottom-8 -left-4 lg:-left-8 w-24 lg:w-32 h-24 lg:h-32 rounded-full opacity-10 border-2 border-goldAccent'
             />
           </motion.div>
         </div>
