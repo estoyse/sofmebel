@@ -29,8 +29,8 @@ export function Hero() {
         }}
       />
 
-      <div className='relative z-10 max-w-[1400px] mx-auto px-6 lg:px-12 lg:pt-24  pt-36 pb-16'>
-        <div className='grid lg:grid-cols-2 gap-16 items-center min-h-[calc(100vh-8rem)]'>
+      <div className='relative z-10 max-w-[1400px] mx-auto px-6 lg:px-12 pt-28 lg:pt-24 pb-16'>
+        <div className='grid lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-[calc(100vh-8rem)]'>
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -55,7 +55,7 @@ export function Hero() {
               transition={{ delay: 0.3, duration: 0.8 }}
               className='space-y-4 font-serif'
             >
-              <h1 className='text-6xl lg:text-7xl xl:text-8xl tracking-tight leading-[1.1] text-white font-light -tracking-[0.02em]'>
+              <h1 className='text-5xl sm:text-6xl lg:text-7xl xl:text-8xl tracking-tight leading-[1.1] text-white font-light -tracking-[0.02em]'>
                 Uyingizni qulay
                 <span className='block mt-2 text-goldAccent font-normal'>
                   va nafis qiling
@@ -95,25 +95,29 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.9, duration: 0.8 }}
-              className='flex gap-12 pt-8'
+              className='grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 pt-8'
             >
               <div>
-                <div className='text-3xl mb-1 text-goldAccent font-light'>
+                <div className='text-2xl sm:text-3xl mb-1 text-goldAccent font-light'>
                   500+
                 </div>
-                <div className='text-sm text-white/50'>Premium Dizaynlar</div>
+                <div className='text-xs sm:text-sm text-white/50'>
+                  Premium Dizaynlar
+                </div>
               </div>
               <div>
-                <div className='text-3xl mb-1 text-goldAccent font-light'>
+                <div className='text-2xl sm:text-3xl mb-1 text-goldAccent font-light'>
                   50K+
                 </div>
-                <div className='text-sm text-white/50'>Mijozlar</div>
+                <div className='text-xs sm:text-sm text-white/50'>Mijozlar</div>
               </div>
-              <div>
-                <div className='text-3xl mb-1 text-goldAccent font-light'>
+              <div className='col-span-2 md:col-span-1 border-t border-white/5 pt-4 md:border-0 md:pt-0'>
+                <div className='text-2xl sm:text-3xl mb-1 text-goldAccent font-light'>
                   25+
                 </div>
-                <div className='text-sm text-white/50'>Yillik Tajriba</div>
+                <div className='text-xs sm:text-sm text-white/50'>
+                  Yillik Tajriba
+                </div>
               </div>
             </motion.div>
           </motion.div>
@@ -122,13 +126,13 @@ export function Hero() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className='relative h-[600px] lg:h-[700px]'
+            className='relative h-[400px] sm:h-[500px] lg:h-[700px] mt-12 lg:mt-0'
           >
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.4, duration: 0.8 }}
-              className='absolute top-0 right-0 w-[70%] h-[65%] rounded-3xl overflow-hidden shadow-2xl border border-goldAccent/20'
+              className='absolute inset-0 lg:inset-auto lg:top-0 lg:right-0 lg:w-[70%] lg:h-[65%] rounded-2xl lg:rounded-3xl overflow-hidden shadow-2xl border border-goldAccent/20'
             >
               <ImageWithFallback
                 src='https://images.unsplash.com/photo-1762803841422-5b8cf8767cd9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBtb2Rlcm4lMjBmdXJuaXR1cmUlMjBzb2ZhfGVufDF8fHx8MTc3MTg0OTMxOXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
@@ -142,7 +146,7 @@ export function Hero() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.6, duration: 0.8 }}
-              className='absolute bottom-0 left-0 w-[55%] h-[50%] rounded-3xl overflow-hidden shadow-2xl border border-goldAccent/20'
+              className='hidden lg:block absolute bottom-0 left-0 w-[55%] h-[50%] rounded-3xl overflow-hidden shadow-2xl border border-goldAccent/20'
             >
               <ImageWithFallback
                 src='https://images.unsplash.com/photo-1760611656233-915efdf138b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwbHV4dXJ5JTIwY2hhaXIlMjBpbnRlcmlvcnxlbnwxfHx8fDE3NzE4NDkzMTl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
@@ -156,7 +160,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.8 }}
-              className='absolute top-1/2 left-1/4 -translate-y-1/2 px-6 py-4 rounded-2xl backdrop-blur-xl shadow-2xl bg-greenDeep/80 border border-goldAccent/30'
+              className='hidden lg:block absolute top-1/2 left-1/4 -translate-y-1/2 px-6 py-4 rounded-2xl backdrop-blur-xl shadow-2xl bg-greenDeep/80 border border-goldAccent/30'
             >
               <div className='text-sm mb-1 text-white/60'>Yangilik</div>
               <div className='text-xl mb-1 text-goldAccent font-medium'>
@@ -174,7 +178,7 @@ export function Hero() {
                 repeat: Infinity,
                 ease: "linear",
               }}
-              className='absolute -top-4 -right-4 w-24 h-24 rounded-full opacity-20 border-2 border-goldAccent'
+              className='hidden lg:block absolute -top-4 -right-4 w-24 h-24 rounded-full opacity-20 border-2 border-goldAccent'
             />
             <motion.div
               animate={{
@@ -185,7 +189,7 @@ export function Hero() {
                 repeat: Infinity,
                 ease: "linear",
               }}
-              className='absolute -bottom-8 -left-8 w-32 h-32 rounded-full opacity-10 border-2 border-goldAccent'
+              className='hidden lg:block absolute -bottom-8 -left-8 w-32 h-32 rounded-full opacity-10 border-2 border-goldAccent'
             />
           </motion.div>
         </div>
