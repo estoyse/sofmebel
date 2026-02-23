@@ -68,7 +68,7 @@ export function Footer() {
                 type='submit'
                 className='px-8 py-4 rounded-full flex items-center gap-2 transition-all duration-300 hover:scale-105 hover:shadow-2xl bg-goldAccent text-greenDeep font-medium'
               >
-                <span>Obuna bo&apos;lish</span>
+                <span className='hidden md:block'>Obuna bo&apos;lish</span>
                 <Send className='w-4 h-4' />
               </button>
             </form>
