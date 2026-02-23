@@ -43,7 +43,7 @@ export function Footer() {
           className='mb-16 pb-16 border-b border-goldAccent/20'
         >
           <div className='max-w-2xl mx-auto text-center'>
-            <h3 className='text-3xl lg:text-4xl mb-4 text-white font-light'>
+            <h3 className='text-3xl lg:text-4xl mb-4 text-white font-serif'>
               Ilhomlanishda <span className='text-goldAccent'>Davom eting</span>
             </h3>
             <p className='text-base mb-8 text-white/70'>
